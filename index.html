@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/x-mathjax-config">
+            MathJax.Ajax.config.path["Contrib"] = ".";
+            MathJax.Hub.Config({
+                extensions: ["tex2jax.js","[Contrib]/eval.js"],
+                jax: ["input/TeX","output/HTML-CSS"],
+                tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+            });
+        </script>
+
+    </head>
+    <body>
+        <h1>MathJax <code>\eval</code> extension</h1>
+        <p>Evaluate and simplify mathematical expressions inside LaTeX.</p>
+        <p>Based on the <a href="http://numbas.github.io/LissaJS">LissaJS</a> library.</p>
+        <p>By <a href="http://somethingorotherwhatever.com">Christian Lawson-Perfect</a>.</p>
+        <h2>Usage</h2>
+        <p><code>\gcd(36,48) = \eval{gcd(36,48)}</code> → \( \gcd(36,48) = \eval{gcd(36,48)} \)</p>
+        <p><code>x^1 + \frac{3}{1} - 0 = \simplify{x^1+3/1-0}</code> → \( x^1 + \frac{3}{1} - 0 = \simplify{x^1+3/1-0} \)</p>
+
+    </body>
+</html>
